@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Darker Grotesque';
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #85CDF5;
+    padding: 7px;
+}
+
+.link {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LinksHeader {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+
+/* estilização da seção adote um lobinho */
+
+
+.AdoteUmLobinho {
+    color: white;
+    height: 650px;
+    background-image: url('./images/Mask\ Group.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.Titulo {
+    font-size: 90px;
+    margin-bottom: 17px;
+}
+
+.AdoteUmLobinho > p{
+    margin-top: 20px;
+    font-size: 25px;
+    text-align: center;
+    line-height: 25px;
+}
+
+.Sobre { 
+    background-color: #2C5680;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+.Subtitulo {
+    color: #DEB959;
+    font-size: 40px;
+}
+
+.Sobre > p {
+    color: white;
+    text-align: center;
+    font-size: 23px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* estilização da seção valores */
+
+
+.Valores {
+    background-color: #333333;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    list-style-type: none;
+    padding: 30px 50px 80px 50px;
+}
+
+.valoresContent {
+    display: flex;
+    width: 55%;
+    list-style-type: none;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.valoresItens {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 370px;
+}
+
+.valoresImg {
+    background-color: white;
+    padding: 20px;
+    border-radius: 50%;
+}
+
+.valoresItens > h3 {
+    font-size: 28px;
+}
+
+.valoresItens > p {
+    text-align: center;
+    font-size: 20px;
+    line-height: 16px;
+}
+
+
+/* estilização da seção lobos exemplo */
+
+
+.LobosExemplo {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 0 120px 0;
+}
+
+.LobosExemploContent {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    list-style-type: none;
+    margin: 80px 0 0 0;
+}
+
+.LobosExemplosItens {
+    display: flex;
+    gap: 55px;
+}
+
+#LobosExemplosItensVerse {
+    flex-direction: row-reverse;
+    gap: 60px;
+}
+
+.LobosExemplosItens > img {
+    box-shadow: -30px -30px 0px 0px #2C5680;    
+}
+
+#imgLoboVerse {
+    box-shadow: 30px -30px 0px 0px #2C5680;
+}
+
+.LobosExemplosDescrição {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    justify-content: start;
+}
+
+#LobosExemplosDescriçãoVerse {
+    align-items: end;
+}
+
+.LobosExemplosDescrição > h3 {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.idadeLobo {
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.descriçãoLobo {
+    line-height: 21px;
+    font-size: 24px;
+    margin-top: 27px;
+}
+
+#LobosExemplosDescriçãoVerse > p {
+    text-align: end;
+}
+
+
+/*estilização do footer */
+
+
+footer {
+    background-color: #333333;
+    display: flex;
+    color: white;
+    padding: 30px 20px 30px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
+}
+
+.Contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.Contatos > div {
+    display: flex;
+    gap: 10px;
+}
+
+.Contatos > div > img {
+    align-self: flex-start;
+}
+
+.Contatos > nav {
+    margin-top: 15px;
+}
+
+.Contatos > nav > a {
+    color: black;
+    background-color: #DEB959;
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.imgDesenvolvimento {
+    margin-left: 20%;
+}
