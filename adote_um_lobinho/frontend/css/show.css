@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+main{
+    display: flex;
+
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 83px;
+}
+
+/* informacoes principais */
+#FotoTextos {
+    display: flex;
+
+    flex-direction: row;
+
+    gap: 52px;
+    margin-bottom: 50px;
+}
+/* mexendo na parte esquerda da pagina: */
+#imagens_botoes {
+    display: flex; 
+
+    flex-direction: column;
+
+    gap: 40px;
+}
+
+#botoes {
+    display: flex;
+
+    gap: 70px;
+}
+
+/* mudando o texto */
+#texto {
+    width: 478px;
+    height:497px;
+
+    font-family: Darker Grotesque;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 20px;
+}
+/* editando a foto do lobo */
+
+#moldura {
+    position: relative; /* Define o limite para os itens absolutos dentro dele */
+    width: 430px;       /* Mesmo tamanho da imagem */
+    height: 328px;
+    margin-bottom: 20px; /* Dá um espaço para os botões não colarem */
+}
+
+#caixa_azul {
+    width: 430px;
+    height: 328px;
+    
+    background-color: #2C5680;
+
+    position: absolute; 
+    top: -33px;
+    left: -40px;
+    z-index: 0;
+}
+
+#foto_do_lobo {
+    width: 430px;
+    height: 328px;
+
+    object-fit: cover;
+
+    position: relative;
+    z-index: 1;
+}
+
+/* editando os botoes */
+button {
+    width: 180px;
+    height: 56px;
+
+    border: none;
+
+    color:white;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 700;
+
+    transition: 0.5s;
+}
+
+#botao_adotar {
+    background-color: #7AAC3A;
+}
+
+#botao_excluir {
+    background-color: #DE5959;
+}
+
+button:hover {
+    transform:scale(1.1)
+}
+
+button:active {
+    transform:scale(0.9)
+}
+
+/* editando o titulo */
+#Nome_do_lobo {
+    font-family: Roboto;
+    font-size: 36px;
+
+    margin-top: 50px;
+}
