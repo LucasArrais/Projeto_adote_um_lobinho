@@ -1,0 +1,115 @@
+
+
+main {
+    margin: 50px 219px 50px 221px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    align-items: center;
+}
+
+/* parte que guardara informacoes do usuario */
+
+/* manipulando as caixas de input */
+
+#form {
+    width: 960px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 20px;
+}
+
+#em_cima {
+    width: 960px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button {
+    display: flex;
+    width: 209px;
+    height: 60px;
+
+    background-color: #2C5680;
+    color: #FFFFFF;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 36px;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+button:active {
+    transform:scale(0.9)
+}
+
+input {
+    height: 84px;
+
+    background-color: white;
+
+    border: none;
+    border-bottom: 1px solid black;
+    padding-bottom: 42px;
+
+    font-size: 26px;
+}
+
+input:focus {
+    outline: none;
+}
+
+#nome_pessoa{
+    width: 870px;
+}
+
+#idade_pessoa{
+    width: 74px;
+}
+
+#email_pessoa {
+    width: 960px;
+}
+
+
+/* parte que sera manipulada pelo js com API */
+.parte_da_API {
+    display: flex;
+    flex-direction: row;
+
+    margin-bottom: 34px;
+}
+
+#foto_do_lobo {
+    width: 200px;
+    height: 200px;
+
+    margin-right: 50px;
+
+    border-radius: 100px;
+    object-fit: cover;
+}
+
+#id {
+    width: 498px;
+    height: 19px;
+
+    font-size: 14px;
+}
+
+#nome {
+    width: 597px;
+    height: 81px;
+
+    font-size: 60px;
+}
