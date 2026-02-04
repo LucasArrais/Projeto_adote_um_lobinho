@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@300..900&family=SN+Pro:ital,wght@0,200..900;1,200..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Darker Grotesque';
+}
+
+header {
+    background-color: #85CDF5;
+    padding: 7px;
+}
+
+.link {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.LinksHeader {
+    color: black;
+    font-size: 30px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/*estilização do footer */
+
+
+footer {
+    background-color: #333333;
+    display: flex;
+    color: white;
+    padding: 30px 20px 30px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px
+}
+
+.Contatos {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    
+}
+
+.Contatos > div {
+    display: flex;
+    gap: 10px;
+}
+
+.Contatos > div > img {
+    align-self: flex-start;
+}
+
+.Contatos > nav {
+    margin-top: 15px;
+}
+
+.Contatos > nav > a {
+    color: black;
+    background-color: #DEB959;
+    text-decoration: none;
+    padding: 4px 8px 4px 8px;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.imgDesenvolvimento {
+    margin-left: 20%;
+}
