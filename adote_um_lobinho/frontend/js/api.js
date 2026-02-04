@@ -28,7 +28,7 @@ export async function getLobinhosPaginated(page = 1, limit = 4, filters = "") {
 }
 
 // Listas todos os lobinhos ou filtra por parâmetros
-async function getLobinhos(params = '') {
+export async function getLobinhos(params = '') {
   const res = await fetch(`${API_BASE}/lobinhos${params}`);
 
   if (!res.ok) {
@@ -50,7 +50,7 @@ async function getLobinhoById(id) {
 }
 
 // Adiciona um novo lobinho
-async function postLobinho(data) {
+export async function postLobinho(data) {
   const res = await fetch(`${API_BASE}/lobinhos`, {
     method: 'POST',
     headers: {
