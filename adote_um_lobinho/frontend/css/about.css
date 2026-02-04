@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Darker Grotesque;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#titulo{
+    margin-top: 50px;
+    display: flex; 
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    height: 56px;
+    font-size: 48px;
+    font-weight: 400;
+    font-family: Roboto;
+}
+
+#paragrafo {
+    margin: 40px 0 50px 0;
+
+    width: 960px;
+    height: 134px;
+
+    font-size: 24px;
+    text-align: center;
+    line-height: 24px;
+    letter-spacing: 3.4px;
+
+    display: flex;
+    align-items: center;
+
+}
