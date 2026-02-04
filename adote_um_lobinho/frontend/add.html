@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Adicionar Lobinho | Adote um Lobinho</title>
+  <link rel="stylesheet" href="">
+</head>
+<body>
+  <header>
+    <a href="homepage.html">← Voltar para a lista</a>
+  </header>
+
+  <main>
+    <h1>Coloque um Lobinho para Adoção</h1>
+    
+    <form id="formAdd">
+      <div class="field">
+        <label for="nome">Nome do Lobinho:</label>
+        <input name="nome" id="nome" placeholder="Ex: Rex" required />
+      </div>
+
+      <div class="field">
+        <label for="idade">Anos:</label>
+        <input name="idade" id="idade" type="number" min="0" placeholder="Ex: 2" required />
+      </div>
+
+      <div class="field">
+        <label for="imagem">Link da Foto:</label>
+        <input name="imagem" id="imagem" type="url" placeholder="https://..." required />
+      </div>
+
+      <div class="field">
+        <label for="descricao">Descrição:</label>
+        <textarea name="descricao" id="descricao" placeholder="Conte um pouco sobre ele..."></textarea>
+      </div>
+
+      <button type="submit">Salvar</button>
+    </form>
+  </main>
+
+  <script type="module" src="./js/add.js"></script>
+</body>
+</html>
