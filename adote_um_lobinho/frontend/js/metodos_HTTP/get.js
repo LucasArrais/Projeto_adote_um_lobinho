@@ -50,4 +50,25 @@ async function buscarLobinhosPaginados (pagina = 3, limite = 4) {
     }
 }
 
-buscarLobinhosPaginados ()
+async function buscarLobinhoSelecionado (id = 1000) {
+    try{
+        const response = await fetch (`http://localhost:3000/lobinhos?id=${id}`);
+
+        if (!response.ok){
+            throw new Error(`Erro HTTP! Status: ${response.status}`);
+        }
+
+        const lobinho = await response.json();
+
+        console.log(lobinho);
+
+        return lobinho;
+    }
+    catch (error) {
+        console.log(`Erro ao buscar bolinhos paginados: `, error);
+        throw error;
+    }
+}
+
+
+buscarLobinhoSelecionado ()
