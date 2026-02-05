@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Adotar</title>
+  <link rel="stylesheet" href="./css/global.css" />
+  <link rel="stylesheet" href="./css/adopt.css" />
+</head>
+
+<body>
+  <header>
+    <nav class="link">
+      <a href="list.html" class="LinksHeader">Nossos Lobinhos</a>
+      <a href="list.html" class="LinksHeader">
+        <img src="./images/Group 3.png" alt="Logo do site">
+      </a>
+      <a href="about.html" class="LinksHeader">Quem Somos</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="parte_da_API">
+      <div id="foto">
+        <img id="foto_do_lobo" src="./images/loboexemplo.png" alt="Lobinho" />
+      </div>
+
+      <div class="nome_id">
+        <p id="nome">
+          Adote o(a) <span id="Nome_do_lobo"></span>
+        </p>
+        <p id="id">
+          #<span id="id_do_lobo"></span>
+        </p>
+      </div>
+    </div>
+
+    <form id="form">
+      <div id="em_cima">
+        <input type="text" id="nome_pessoa" placeholder="Seu nome:" required />
+        <input type="number" id="idade_pessoa" placeholder="Idade:" required />
+      </div>
+      <input type="email" id="email_pessoa" placeholder="E-mail:" required />
+      <button type="submit">Adotar</button>
+    </form>
+
+    <!-- mensagem quando já foi adotado -->
+    <p id="mensagem-adotado" style="display: none; text-align: center;">
+      💙 Este lobinho já encontrou um lar.
+    </p>
+
+    <script type="module" src="./js/adopt.js"></script>
+  </main>
+
+  <footer>
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1873241131534!2d-43.1358351237502!3d-22.906460537861218!"
+      width="260"
+      height="168"
+      style="border:0;"
+      loading="lazy">
+    </iframe>
+
+    <div class="Contatos">
+      <div>
+        <img src="./images/placeholder-for-map.png">
+        <p>Av. Milton Tavares de Souza, s/n - Sala 115 B<br>
+        Boa Viagem, Niterói - RJ</p>
+      </div>
+      <div>
+        <img src="./images/Group.png">
+        <p>(99) 99999-9999</p>
+      </div>
+      <div>
+        <img src="./images/envelope.png">
+        <p>salve-lovos@lobINhos.com</p>
+      </div>
+    </div>
+
+    <div class="imgDesenvolvimento">
+      <p>Desenvolvido com</p>
+      <img src="./images/paws.png">
+    </div>
+  </footer>
+</body>
+</html>
