@@ -4,40 +4,79 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Adicionar Lobinho | Adote um Lobinho</title>
-  <link rel="stylesheet" href="">
+  <link rel="stylesheet" href="./css/global.css">
+  <link rel="stylesheet" href="./css/add.css">
 </head>
 <body>
+
   <header>
-    <a href="homepage.html">← Voltar para a lista</a>
+     <nav class="link">
+        <a href="./list.html" class="LinksHeader">Nossos Lobinhos</a>
+        <a href="" class="LinksHeader"><img src="./images/Group 3.png" alt="Logo do site"></a>
+        <a href="./about.html" class="LinksHeader">Quem Somos</a>
+     </nav>
   </header>
 
   <main>
-    <h1>Coloque um Lobinho para Adoção</h1>
-    
-    <form id="formAdd">
-      <div class="field">
-        <label for="nome">Nome do Lobinho:</label>
-        <input name="nome" id="nome" placeholder="Ex: Rex" required />
-      </div>
+    <div id="borda">
+      <p id="titulo">Coloque um Lobinho para Adoção</p>
+      
+      <form id="formAdd">
+        <div id="em_cima">
+          <div class="field_nome">
+            <label for="nome">Nome do Lobinho:</label>
+            <input name="nome" class="caixa" id="nome" required />
+          </div>
 
-      <div class="field">
-        <label for="idade">Anos:</label>
-        <input name="idade" id="idade" type="number" min="0" placeholder="Ex: 2" required />
-      </div>
+          <div class="field_idade">
+            <label for="idade">Anos:</label>
+            <input name="idade" class="caixa" id="idade" type="number" min="0" required />
+          </div>
+        </div>
 
-      <div class="field">
-        <label for="imagem">Link da Foto:</label>
-        <input name="imagem" id="imagem" type="url" placeholder="https://..." required />
-      </div>
+        <div class="field_foto">
+          <label for="imagem">Link da Foto:</label>
+          <input name="imagem" class="caixa" id="imagem" type="url" required />
+        </div>
 
-      <div class="field">
-        <label for="descricao">Descrição:</label>
-        <textarea name="descricao" id="descricao" placeholder="Conte um pouco sobre ele..."></textarea>
-      </div>
+        <div class="field_descricao">
+          <label for="descricao">Descrição:</label>
+          <textarea name="descricao" class="caixa" id="descricao"></textarea>
+        </div>
 
-      <button type="submit">Salvar</button>
-    </form>
+        <button type="submit">Salvar</button>
+      </form>
+    </div>
   </main>
+
+  <footer>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1873241131534!2d-43.1358351237502!3d-22.906460537861218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1770159200045!5m2!1spt-BR!2sbr" width="260" height="168" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div class="Contatos">
+        <div>
+            <img src="./images/placeholder-for-map.png" alt="imagem de localização de mapa">
+            <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa<br> 
+            Viagem, Niterói - RJ, 24210-315</p>
+        </div>
+
+        <div>
+            <img src="./images/Group.png" alt="imagem de um telefone">
+            <p>(99) 99999-9999</p>
+        </div>
+
+        <div>
+            <img src="./images/envelope.png" alt="imagem de um envelope">
+            <p>salve-lobos@lobINhos.com</p>
+        </div>
+        <nav>
+            <a href="">Quem Somos</a>
+        </nav>
+    </div>
+    <div class="imgDesenvolvimento">
+        <p>Desenvolvido com</p>
+        <img src="./images/paws.png" alt="Logo da IN Junior">
+    </div>
+
+</footer>
 
   <script type="module" src="./js/add.js"></script>
 </body>
