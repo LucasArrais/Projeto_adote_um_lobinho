@@ -37,7 +37,9 @@ footer {
     padding: 30px 20px 30px 20px;
     justify-content: center;
     align-items: center;
-    gap: 50px
+    gap: 50px;
+    flex-wrap: wrap;
+    align-content: center;
 }
 
 .Contatos {
@@ -71,4 +73,10 @@ footer {
 
 .imgDesenvolvimento {
     margin-left: 20%;
+}
+
+@media (max-width: 1000px) {
+    .imgDesenvolvimento {
+        margin: 0;
+    }
 }
