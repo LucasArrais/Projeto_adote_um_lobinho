@@ -5,28 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossos Lobinhos - Lista</title>
     <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/testando.css" />
+    <link rel="stylesheet" href="css/list.css" />
 </head>
 <body>
     <header>
         <nav class="link">
             <a href="list.html" class="LinksHeader">Nossos Lobinhos</a>
-            <a href="list.html" class="LinksHeader"><img src="./images/Group 3.png" alt="Logo"></a>
+            <a href="homepage.html" class="LinksHeader"><img src="./images/Group 3.png" alt="Logo"></a>
             <a href="quem-somos.html" class="LinksHeader">Quem Somos</a>
         </nav>
     </header>
 
     <main>
-        <h2>Lista de Lobinhos</h2>
-
-        <div class="controls">
-            <input id="search" type="text" placeholder="Buscar por nome..." />
-            <label>
-                <input type="checkbox" id="filter" /> Ver apenas adotados
+        <div class="search-container">
+            <div class="search-box">
+                <input id="search" type="text" placeholder="Buscar por nome..." />
+                <button id="btn-add-lobo" onclick="window.location.href='add.html'">+ Lobo</button>
+            </div>
+            <label class="filter-label">
+                <input type="checkbox" id="filter" /> Ver lobinhos adotados
             </label>
         </div>
 
-        <div id="lobinhos-container"></div>
+        <section id="lobinhos-container"></section>
 
         <div id="pagination"></div> 
     </main>

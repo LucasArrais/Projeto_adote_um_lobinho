@@ -10,23 +10,16 @@ const LIMIT = 4;
 
 async function loadPage(page = 1) {
     let extraParams = '';
-    
-    if (inputSearch.value) {
-        extraParams += `&nome_like=${inputSearch.value}`;
-    }
-    
-    if (checkFilter.checked) {
-        extraParams += `&adotado=true`;
-    }
+    if (inputSearch.value) extraParams += `&nome_like=${inputSearch.value}`;
+    if (checkFilter.checked) extraParams += `&adotado=true`;
 
     try {
         const { data, total } = await getLobinhos(page, LIMIT, extraParams);
         currentPage = page;
         renderLobinhos(data);
-        renderPagination(total);
+        renderPagination(total); 
     } catch (err) {
-        container.innerHTML = "<p>Erro ao carregar lobinhos.</p>";
-        console.error(err);
+        container.innerHTML = "<p>Erro ao conectar com a API.</p>";
     }
 }
 
@@ -36,43 +29,50 @@ function renderLobinhos(lobinhos) {
         return;
     }
 
-    container.innerHTML = lobinhos.map(lobo => `
-        <div class="lobo-card">
-            <img src="${lobo.imagem}" alt="${lobo.nome}">
-            <h3>${lobo.nome}</h3>
-            <p>Idade: ${lobo.idade} anos</p>
-            <p class="status">${lobo.adotado ? "Já Adotado" : "Disponível"}</p>
-            <a href="show.html?id=${lobo.id}">
-                <button class="${lobo.adotado ? 'btn-adotado' : 'btn-adotar'}">
-                    ${lobo.adotado ? 'Ver Detalhes' : 'Adotar'}
-                </button>
-            </a>
-        </div>
+    container.innerHTML = lobinhos.map((lobo, index) => `
+        <article class="lobo-card ${index % 2 !== 0 ? 'card-reverse' : ''}">
+            <div class="lobo-image-container">
+                <img src="${lobo.imagem}" alt="Foto de ${lobo.nome}">
+            </div>
+            <div class="lobo-content">
+                <div class="lobo-header">
+                    <div>
+                        <h3>${lobo.nome}</h3>
+                        <span>Idade: ${lobo.idade} anos</span>
+                    </div>
+                    <button class="${lobo.adotado ? 'btn-ja-adotado' : 'btn-adotar'}" 
+                            onclick="location.href='show.html?id=${lobo.id}'">
+                        ${lobo.adotado ? 'Adotado' : 'Adotar'}
+                    </button>
+                </div>
+                <p class="lobo-descricao">${lobo.descricao || "Este lobinho está ansioso para te conhecer!"}</p>
+            </div>
+        </article>
     `).join('');
 }
 
-// NOVA LÓGICA DE PAGINAÇÃO LIMITADA
 function renderPagination(totalItems) {
     const totalPages = Math.ceil(totalItems / LIMIT);
-    let buttonsHTML = "";
+    if (totalPages <= 1) {
+        pagination.innerHTML = "";
+        return;
+    }
 
-    // Define o intervalo de páginas a serem exibidas (máximo 5 botões)
+    let buttonsHTML = "";
     const maxVisibleButtons = 5;
+    
     let startPage = Math.max(1, currentPage - Math.floor(maxVisibleButtons / 2));
     let endPage = Math.min(totalPages, startPage + maxVisibleButtons - 1);
 
-    // Ajusta o início se estivermos nas últimas páginas
     if (endPage - startPage < maxVisibleButtons - 1) {
         startPage = Math.max(1, endPage - maxVisibleButtons + 1);
     }
 
-    // Botão de "Primeira Página" se não estiver visível
     if (startPage > 1) {
-        buttonsHTML += `<button onclick="loadPage(1)">1</button>`;
-        if (startPage > 2) buttonsHTML += `<span>...</span>`;
+        buttonsHTML += `<button class="page-btn" onclick="loadPage(1)">1</button>`;
+        if (startPage > 2) buttonsHTML += `<span class="dots">...</span>`;
     }
 
-    // Gera os botões numerados dentro do intervalo
     for (let i = startPage; i <= endPage; i++) {
         buttonsHTML += `
             <button class="page-btn ${i === currentPage ? 'active' : ''}" 
@@ -81,10 +81,9 @@ function renderPagination(totalItems) {
             </button>`;
     }
 
-    // Botão de "Última Página" se não estiver visível
     if (endPage < totalPages) {
-        if (endPage < totalPages - 1) buttonsHTML += `<span>...</span>`;
-        buttonsHTML += `<button onclick="loadPage(${totalPages})">${totalPages}</button>`;
+        if (endPage < totalPages - 1) buttonsHTML += `<span class="dots">...</span>`;
+        buttonsHTML += `<button class="page-btn" onclick="loadPage(${totalPages})">${totalPages}</button>`;
     }
 
     pagination.innerHTML = buttonsHTML;
