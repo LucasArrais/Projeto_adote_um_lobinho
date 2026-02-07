@@ -26,10 +26,24 @@ header {
     font-weight: 600;
 }
 
+#quemSomos {
+    display: flex;
+    align-items: end;;
+    flex-direction: column;
+}
+
+#sombra {
+    width: 99px;
+    height: 5px;
+    background-color: #333333;
+    transition: 1s;
+}
+
+#quemSomos:hover #sombra {
+    width: 152px;
+}
 
 /*estilização do footer */
-
-
 footer {
     background-color: #333333;
     display: flex;
