@@ -26,6 +26,11 @@ header {
     font-weight: 600;
 }
 
+.link > a:first-child:hover, .link > a:last-child:hover {
+    transform-origin: right;
+    border-bottom: 3px solid black;
+}
+
 
 /*estilização do footer */
 
@@ -78,5 +83,16 @@ footer {
 @media (max-width: 1000px) {
     .imgDesenvolvimento {
         margin: 0;
+    }
+}
+
+@media (max-width: 550px) {
+    .link {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .link > a:first-child {
+        order: 2;
     }
 }
