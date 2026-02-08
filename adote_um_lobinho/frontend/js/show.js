@@ -66,7 +66,7 @@ function renderizarLobo(lobo) {
                 btnExcluir.innerText = "EXCLUINDO...";
                 await deleteLobinho(lobo.id);
                 alert("Registro removido.");
-                window.location.href = 'index.html';
+                window.location.href = 'list.html';
             } catch (error) {
                 alert("Erro ao excluir.");
                 btnExcluir.disabled = false;

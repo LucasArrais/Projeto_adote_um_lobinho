@@ -34,9 +34,11 @@ form.addEventListener('submit', async (e) => {
 
     const payload = {
         adotado: true,
-        nomeDono: document.getElementById('nome_pessoa').value,
-        idadeDono: parseInt(document.getElementById('idade_pessoa').value),
-        emailDono: document.getElementById('email_pessoa').value
+        adotante: {
+            nome: document.getElementById('nome_pessoa').value,
+            idade: parseInt(document.getElementById('idade_pessoa').value),
+            email: document.getElementById('email_pessoa').value
+        }
     };
 
     try {
