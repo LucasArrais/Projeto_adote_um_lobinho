@@ -21,7 +21,7 @@ Para executar o projeto localmente, siga os passos abaixo:
 2. **Inicialização da API:**
    npm run start:api
 
-O servidor rodará em http://localhost:3000/lobinhos.
+O servidor rodará em http://localhost:3000
 
 ---
 
