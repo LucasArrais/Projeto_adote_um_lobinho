@@ -1,72 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8" />
-    <title>Adotar</title>
+    <title>Adotar - Adote um Lobinho</title>
     <link rel="stylesheet" href="./css/global.css" />
     <link rel="stylesheet" href="./css/adopt.css"  />
 </head>
-
 <body>
     <header>
         <nav class="link">
             <a href="./list.html" class="LinksHeader">Nossos Lobinhos</a>
-            <a href="homepage.html" class="LinksHeader"><img src="./images/footer_header/Group 3.png" alt="Logo do site"></a>
-            <a href="./about.html" class="LinksHeader" id="quemSomos">Quem Somos<div id="sombra"></div></a>
+            <a href="homepage.html" class="LinksHeader">
+                <img src="./images/footer_header/Group 3.png" alt="Logo do site">
+            </a>
+            <a href="./about.html" class="LinksHeader" id="quemSomos">Quem Somos</a>
         </nav>
     </header>
+
     <main>
-        <!-- parte destinada ao js do lobo escolhido na API: -->
          <div class="parte_da_API">
             <div id="foto">
-                <!-- imagem ilustrativa: -->
-                 <img id="foto_do_lobo" src="./images/loboexemplo.png" alt="linha branca" />
+                 <img id="foto_do_lobo" src="./images/loboexemplo.png" alt="Foto do lobo" />
             </div>
 
             <div class="nome_id">
-                <p id="nome">
-                    Adote o(a) <span id="Nome_do_lobo">nome</span>
-                </p>
-                <p id="id">
-                    #<span id="id_do_lobo">aqui ficará o id do lobo</span>
-                </p>
+                <p id="nome">Adote o(a) <span id="Nome_do_lobo">...</span></p>
+                <p id="id">#<span id="id_do_lobo">000</span></p>
             </div>
          </div>
 
-
         <form id="form">
             <div id="em_cima">
-                <input type="name" id="nome_pessoa" placeholder="Seu nome:" required />
+                <input type="text" id="nome_pessoa" placeholder="Seu nome:" required />
                 <input type="number" id="idade_pessoa" placeholder="Idade:" required />
             </div>
             <input type="email" id="email_pessoa" placeholder="E-mail:" required />
-            <button>Adotar</button>
+            <button type="submit">Adotar</button>
         </form>
-
-
-        <script type="module" src="js/adopt.js"></script>
     </main>
 
     <footer>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.1873241131534!2d-43.1358351237502!3d-22.906460537861218!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x99817e444e692b%3A0xfd5e35fb577af2f5!2sUFF%20-%20Instituto%20de%20Computa%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1770159200045!5m2!1spt-BR!2sbr" width="260" height="168" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?..." width="260" height="168" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         <div class="Contatos">
             <div>
-                <img src="./images/footer_header/placeholder-for-map.png" alt="imagem de localização de mapa">
-                <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa<br> 
-                Viagem, Niterói - RJ, 24210-315</p>
+                <img src="./images/footer_header/placeholder-for-map.png" alt="Localização">
+                <p>Av. Milton Tavares de Souza, s/n - Sala 115 B - Boa Viagem, Niterói - RJ</p>
             </div>
             <div>
-                <img src="./images/footer_header/Group.png" alt="imagem de um telefone">
+                <img src="./images/footer_header/Group.png" alt="Telefone">
                 <p>(99) 99999-9999</p>
             </div>
             <div>
-                <img src="./images/footer_header/envelope.png" alt="imagem de um envelope">
-                <p>salve-lobos@lobINhos.com</p>
+                <img src="./images/footer_header/envelope.png" alt="Email">
+                <p>salve-lobos@lobinhos.com</p>
             </div>
-            <nav>
-                <a href="about.html">Quem Somos</a>
-            </nav>
         </div>
         <div class="imgDesenvolvimento">
             <p>Desenvolvido com</p>
@@ -74,5 +61,6 @@
         </div>
     </footer>
 
+    <script type="module" src="js/adopt.js"></script>
 </body>
 </html>
